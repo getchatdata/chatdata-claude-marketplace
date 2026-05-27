@@ -1,0 +1,42 @@
+answer_path_id: is-this-movement-real-or-data-issue
+canonical_question: Is this movement real or a data issue?
+aliases:
+  - is the conversion drop real or a dashboard issue?
+  - is this a real decline or bad data?
+metric: self_serve_conversion
+route_id: movement-real-or-data-issue
+preferred_dimensions:
+  - dashboard_total
+  - tagging_change
+query_or_retrieval_path: queries/trusted/self_serve_conversion_wbr.sql
+validation_routine: compare to weekly dashboard export and check tagging caveat
+benchmark_source_preference:
+  - system_trusted_artifact
+  - user_dashboard_link
+  - user_table_screenshot
+caveats:
+  - dashboard tie-out passes, but attribution confidence is softened by tagging drift
+expected_answer_state: verified
+review_status: reviewed
+maturity: reviewed
+recurrence_tier: high
+business_value_tier: high
+slack_response:
+  draft: It looks directionally real, but I want a benchmark check before ruling out a dashboard or tagging issue.
+  verified: The movement looks real enough to act on. The trusted dashboard matches the drop, but campaign tagging changed during the same period so attribution confidence stays qualified.
+  next_action_draft: Paste the trusted dashboard link if you want ChatData to benchmark this path now.
+  next_action_verified: Treat the drop as real for the WBR, then confirm whether tagging changed traffic mix before escalating a product bug.
+  benchmark_link_keywords:
+    - demo.getchatdata.com/wbr/self-serve-conversion
+    - dashboard-issue-check
+  screenshot_keywords:
+    - real-vs-data-table
+    - self-serve-conversion-table
+  evidence_draft:
+    - label: Working hypothesis
+      value: Dashboard tie-out should decide whether the movement is real
+  evidence_verified:
+    - label: Tie-out
+      value: Trusted dashboard confirms the same week-over-week drop
+    - label: Caveat
+      value: Campaign tagging drift keeps attribution confidence below fully trusted

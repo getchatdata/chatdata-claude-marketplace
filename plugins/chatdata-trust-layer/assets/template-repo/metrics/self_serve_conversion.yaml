@@ -1,0 +1,30 @@
+metric_id: self_serve_conversion
+label: Self-serve conversion
+definition: Qualified signups divided by qualified sessions.
+business_owner: growth
+data_owner: growth_analytics
+grain: week
+timezone: America/Los_Angeles
+filters:
+  - pilot_domain: seller_funnel_wbr
+exclusions:
+  - test_accounts
+  - partner_assisted_sessions
+trusted_dashboard_url: https://demo.getchatdata.com/wbr/self-serve-conversion
+trusted_query_path: queries/trusted/self_serve_conversion_wbr.sql
+trusted_query_backend: github
+freshness_rule: synthetic dashboard export refreshed daily by 08:00 PT
+validation_tolerance:
+  pct_delta_max: 0.5
+known_caveats:
+  - campaign_tagging_changed_three_days_before_the_drop
+  - partial_current_week_should_not_be_used_before_monday_08_00_pt
+clarification_rules:
+  - if date range omitted, prefer the current weekly business review period
+  - if segment omitted, start with overall then decompose by channel, device, and landing_page
+escalation_rules:
+  - if benchmark delta exceeds tolerance, mark needs_review
+  - if more than one metric is requested, refuse and ask for a narrower question
+review_status: reviewed
+trust_state: verified
+last_reviewed_at: 2026-04-14

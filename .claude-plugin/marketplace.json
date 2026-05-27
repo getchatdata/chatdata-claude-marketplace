@@ -1,0 +1,26 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "chatdata",
+  "description": "ChatData plugins for trusted analytics work in Claude Code.",
+  "owner": {
+    "name": "ChatData",
+    "url": "https://getchatdata.com"
+  },
+  "plugins": [
+    {
+      "name": "chatdata",
+      "source": "./plugins/chatdata-trust-layer",
+      "description": "Operate like a principal data professional inside Claude Code with trusted metrics, validation, proof receipts, and shared private company context.",
+      "version": "0.3.2",
+      "author": {
+        "name": "ChatData",
+        "url": "https://getchatdata.com"
+      },
+      "category": "productivity",
+      "homepage": "https://getchatdata.com",
+      "repository": "https://getchatdata.com",
+      "license": "Proprietary",
+      "keywords": ["chatdata", "analytics", "data", "claude-code", "principal-workflow", "metric-trust"]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+answer_path_id: which-segment-drove-change
+canonical_question: Which market, channel, or device drove the change?
+aliases:
+  - which channel drove the change?
+  - which device drove the conversion decline?
+metric: self_serve_conversion
+route_id: segment-driver
+preferred_dimensions:
+  - channel
+  - device
+  - landing_page
+query_or_retrieval_path: queries/trusted/self_serve_conversion_wbr.sql
+validation_routine: benchmark against dashboard segment export
+benchmark_source_preference:
+  - system_trusted_artifact
+  - user_dashboard_link
+  - user_table_screenshot
+caveats:
+  - mobile paid search is the largest driver in the current synthetic export
+expected_answer_state: trusted
+review_status: reviewed
+maturity: auto_trusted
+recurrence_tier: high
+business_value_tier: high
+slack_response:
+  draft: Mobile paid search is the strongest candidate driver, but I am still tying that cut back to the weekly benchmark.
+  verified: Mobile paid search drove the change, especially traffic routed to the short-form signup page where conversion was materially lower than the standard flow.
+  trusted: Trusted path. Mobile paid search drove the decline, with the short-form signup page producing the largest negative mix shift.
+  next_action_draft: Upload a benchmark table or wait for the trusted dashboard check before promoting this answer.
+  next_action_verified: Share the landing page mix shift in the WBR and keep the tagging caveat attached.
+  next_action_trusted: Reuse this trusted path in the pilot channel for future segment-driver questions.
+  benchmark_link_keywords:
+    - demo.getchatdata.com/wbr/self-serve-conversion
+    - mobile-paid-search
+  screenshot_keywords:
+    - mobile-paid-search-table
+    - segment-driver-table
+  evidence_draft:
+    - label: Driver candidate
+      value: Mobile paid search stands out in the first pass decomposition
+  evidence_verified:
+    - label: Dominant segment
+      value: Mobile paid search contributed 71% of the decline
+    - label: Why it moved
+      value: The short-form signup page converted at 4.8% versus 8.1% for the standard page

@@ -1,0 +1,15 @@
+trusted_artifacts:
+  - artifact_id: weekly-dashboard-self-serve-conversion
+    metric_id: self_serve_conversion
+    label: Seller funnel WBR dashboard
+    source_type: dashboard
+    url: https://demo.getchatdata.com/wbr/self-serve-conversion
+    freshness: synthetic export through yesterday
+    current_value: 6.9
+    previous_value: 8.4
+    tolerance_pct: 0.5
+    dimensions:
+      - channel
+      - device
+      - landing_page
+    last_validated_at: 2026-04-14T07:45:00Z

@@ -1,0 +1,13 @@
+{
+  "name": "chatdata",
+  "version": "0.3.2",
+  "description": "ChatData for Claude Code: operate like a principal data professional with multiplayer company context, trusted analytics workflows, validation, proof receipts, and trial gating.",
+  "author": {
+    "name": "Paras Doshi",
+    "url": "https://getchatdata.com"
+  },
+  "homepage": "https://getchatdata.com",
+  "repository": "https://getchatdata.com",
+  "license": "Proprietary",
+  "keywords": ["chatdata", "analytics", "data", "trust-layer", "metric-store", "wbr", "principal-workflow", "claude-code"]
+}

@@ -1,0 +1,42 @@
+answer_path_id: mobile-paid-search-follow-up
+canonical_question: What changed on mobile paid search?
+aliases:
+  - what changed on paid search?
+  - show me the mobile paid search shift
+metric: self_serve_conversion
+route_id: mobile-paid-search-follow-up
+preferred_dimensions:
+  - landing_page
+  - campaign_routing
+query_or_retrieval_path: queries/generated/mobile_paid_search_mix.sql
+validation_routine: needs user benchmark or trusted artifact before promotion
+benchmark_source_preference:
+  - user_dashboard_link
+  - user_table_screenshot
+  - system_trusted_artifact
+caveats:
+  - this path starts exploratory because the follow-up cut depends on the current campaign routing snapshot
+expected_answer_state: benchmarked
+review_status: draft
+maturity: exploratory
+recurrence_tier: medium
+business_value_tier: medium
+slack_response:
+  draft: Landing page mix appears to be the main shift. Traffic moved toward the short-form signup path, but this follow-up cut still needs a benchmark.
+  benchmarked: Benchmarked path. The mobile paid search shift is real, with short-form signup mix rising sharply during the same week the metric fell.
+  verified: Mobile paid search shifted toward the short-form signup page, which converted at 4.8% versus 8.1% for the standard path.
+  next_action_draft: Paste the dashboard link or upload a benchmark table to move this answer beyond draft.
+  next_action_verified: Keep this path in exploratory mode until the data team reviews the benchmark logic.
+  benchmark_link_keywords:
+    - mobile-paid-search
+    - landing-page-mix
+    - self-serve-conversion
+  screenshot_keywords:
+    - mobile-paid-search-table
+    - landing-page-mix-table
+  evidence_draft:
+    - label: Exploratory signal
+      value: Short-form signup page mix rose sharply inside mobile paid search
+  evidence_verified:
+    - label: Landing page mix
+      value: Short-form signup share rose from 18% to 46% of mobile paid search traffic
