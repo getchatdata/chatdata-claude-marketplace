@@ -1,0 +1,50 @@
+answer_path_id: why-did-self-serve-conversion-drop
+canonical_question: Why did self-serve conversion drop last week?
+aliases:
+  - why did self serve conversion fall last week?
+  - what drove the self-serve conversion decline last week?
+metric: self_serve_conversion
+route_id: self-serve-conversion-drop
+preferred_dimensions:
+  - channel
+  - device
+  - landing_page
+query_or_retrieval_path: queries/trusted/self_serve_conversion_wbr.sql
+validation_routine: compare against weekly dashboard export within 0.5 pct delta
+benchmark_source_preference:
+  - system_trusted_artifact
+  - user_dashboard_link
+  - user_table_screenshot
+caveats:
+  - campaign tagging changed during the same period
+  - traffic quality should be reviewed before calling this purely a product issue
+expected_answer_state: verified
+review_status: reviewed
+maturity: reviewed
+recurrence_tier: high
+business_value_tier: high
+slack_response:
+  draft: Self-serve conversion appears to have fallen from 8.4% to 6.9%, with mobile paid search as the largest plausible driver while ChatData finishes verification.
+  verified: Self-serve conversion fell from 8.4% to 6.9%, and mobile paid search drove most of the decline after traffic shifted toward a lower-converting landing page.
+  next_action_draft: Confirm the dashboard benchmark or upload a benchmark table before promoting this path.
+  next_action_verified: Review mobile paid search routing and save this answer path for future weekly conversion checks.
+  benchmark_link_keywords:
+    - demo.getchatdata.com/wbr/self-serve-conversion
+    - seller-funnel-wbr
+    - self-serve-conversion
+  screenshot_keywords:
+    - self-serve-conversion-table
+    - seller-funnel-wbr-table
+    - conversion-benchmark
+  evidence_draft:
+    - label: Planned decomposition
+      value: Channel, device, and landing page mix
+    - label: Candidate driver
+      value: Mobile paid search sessions rose while signup completion fell
+  evidence_verified:
+    - label: Validation
+      value: Weekly dashboard total matches within 0.2 percentage points
+    - label: Driver
+      value: Mobile paid search contributed 71% of the total decline
+    - label: Landing page mix
+      value: Short-form signup rose from 18% to 46% of mobile paid search traffic

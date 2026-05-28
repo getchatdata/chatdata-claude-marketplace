@@ -1,0 +1,20 @@
+{
+  "name": "chatdata",
+  "interface": {
+    "displayName": "ChatData"
+  },
+  "plugins": [
+    {
+      "name": "chatdata-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/chatdata-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+dashboards:
+  - dashboard_id: seller_funnel_wbr
+    label: Seller funnel weekly business review
+    metric_ids:
+      - self_serve_conversion
+      - contracts
+    url: https://demo.getchatdata.com/wbr/self-serve-conversion
+    owner: growth_analytics

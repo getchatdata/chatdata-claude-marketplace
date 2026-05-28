@@ -1,0 +1,29 @@
+{
+  "name": "chatdata-codex",
+  "version": "0.3.2",
+  "description": "ChatData for Codex: operate like a principal data professional with shared company context, metric packets, validation, proof receipts, and trial gating.",
+  "author": {
+    "name": "Paras Doshi",
+    "url": "https://getchatdata.com"
+  },
+  "homepage": "https://getchatdata.com",
+  "repository": "https://getchatdata.com",
+  "license": "Proprietary",
+  "keywords": ["chatdata", "codex", "analytics", "data", "trust-layer", "principal-workflow"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ChatData",
+    "shortDescription": "Operate like a principal data professional in Codex.",
+    "longDescription": "ChatData brings trusted metrics, company context repos, validation checks, proof receipts, and reusable answer paths into Codex.",
+    "developerName": "Paras Doshi",
+    "category": "Productivity",
+    "capabilities": ["Write", "Interactive"],
+    "websiteURL": "https://getchatdata.com",
+    "defaultPrompt": [
+      "Start ChatData for this data project.",
+      "Investigate this metric using ChatData.",
+      "Check ChatData company repo status."
+    ],
+    "brandColor": "#0B7A4B"
+  }
+}

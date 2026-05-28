@@ -1,0 +1,19 @@
+metric_id: gross_margin_rate
+label: Gross Margin Rate
+definition: Gross profit divided by net sales.
+formula: sum(profit) / nullif(sum(sales), 0)
+grain: selected reporting grain
+timezone: America/Los_Angeles
+blessed_source: data/plugin-test-datasets/retail_clean/orders.csv
+filters:
+  - exclude rows where quantity <= 0
+  - exclude rows where discount < 0 or discount > 1
+exclusions:
+  - incomplete current period unless explicitly requested
+freshness_rule: Data is fresh through the max order_date in the file.
+validation_rules:
+  - denominator must be positive
+  - compare aggregate movement to region/category/sub-category movement
+  - flag Simpson's Paradox risk when aggregate and segment reads disagree
+owner: ChatData demo
+review_status: reviewed

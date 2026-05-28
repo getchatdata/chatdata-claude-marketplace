@@ -1,0 +1,7 @@
+owners:
+  - metric_id: self_serve_conversion
+    business_owner: growth
+    data_owner: growth_analytics
+  - metric_id: contracts
+    business_owner: acquisitions
+    data_owner: acquisitions_analytics

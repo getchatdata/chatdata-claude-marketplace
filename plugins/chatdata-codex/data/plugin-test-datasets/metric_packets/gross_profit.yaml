@@ -1,0 +1,19 @@
+metric_id: gross_profit
+label: Gross Profit
+definition: Net sales minus estimated cost, discount, and return impact.
+formula: sum(profit)
+grain: order_line
+timezone: America/Los_Angeles
+blessed_source: data/plugin-test-datasets/retail_clean/orders.csv
+filters:
+  - exclude rows where quantity <= 0
+  - exclude rows where discount < 0 or discount > 1
+exclusions:
+  - incomplete current period unless explicitly requested
+freshness_rule: Data is fresh through the max order_date in the file.
+validation_rules:
+  - sales and profit totals tie to source CSV
+  - row count and duplicate order-line checks pass
+  - compare by region, category, and sub_category before final conclusion
+owner: ChatData demo
+review_status: reviewed

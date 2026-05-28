@@ -1,0 +1,9 @@
+metric_id: margin_rate_legacy
+label: Legacy Margin Rate
+definition: Legacy demo definition included to test conflict handling. Do not use for final answers.
+formula: avg(profit / nullif(sales, 0))
+grain: order_line
+timezone: America/Los_Angeles
+blessed_source: none
+known_issue: This averages row-level ratios and can disagree with the approved gross_margin_rate definition.
+review_status: rejected
