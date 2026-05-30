@@ -10,8 +10,8 @@
     {
       "name": "chatdata",
       "source": "./plugins/chatdata-trust-layer",
-      "description": "Operate like a principal data professional inside Claude Code with trusted metrics, validation, proof receipts, and shared private company context.",
-      "version": "0.3.2",
+      "description": "Operate like a principal data professional inside Claude Code with trusted metrics, validation, proof receipts, and MCP-backed shared company context.",
+      "version": "0.3.3",
       "author": {
         "name": "ChatData",
         "url": "https://getchatdata.com"

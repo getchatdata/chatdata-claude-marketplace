@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.3 - 2026-05-30
+
+- made ChatData for Claude Code a plugin-plus-MCP install: the plugin owns workflow enforcement, while the MCP owns shared context transport, status, and workspace-backed reads/writes
+- updated `/chatdata:sync-context` to require `chatdata_doctor`, pull hub context through `chatdata_pull_context`, and write reusable artifacts through MCP tools before falling back to local-only state
+- updated `/chatdata:audit-context` to audit the MCP context view first, including pull/export/conflict checks, and block company workflows when the MCP is missing
+- updated the default principal agent to require MCP-backed sync after useful analysis, validation, WBR prep, proof, corrections, metric packets, answer paths, decisions, or eval writes
+
 ## 0.3.2 - 2026-05-27
 
 - switched ChatData-managed company repo sync to the ChatData backend so Claude Code users do not need local GitHub write access

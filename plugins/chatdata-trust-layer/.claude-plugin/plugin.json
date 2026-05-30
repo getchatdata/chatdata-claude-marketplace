@@ -1,7 +1,7 @@
 {
   "name": "chatdata",
-  "version": "0.3.2",
-  "description": "ChatData for Claude Code: operate like a principal data professional with multiplayer company context, trusted analytics workflows, validation, proof receipts, and trial gating.",
+  "version": "0.3.3",
+  "description": "ChatData for Claude Code: operate like a principal data professional with MCP-backed shared context, trusted analytics workflows, validation, proof receipts, and trial gating.",
   "author": {
     "name": "Paras Doshi",
     "url": "https://getchatdata.com"

@@ -33,4 +33,6 @@ Only estimate time or value when the assumptions are visible. Label estimates as
 
 When a company context repo is configured, the helper also appends the proof receipt to `proof/impact-log.jsonl` in the shared repo so the work compounds for the team.
 
-After recording a company proof receipt, run `/chatdata:sync-context` as its own final step and report the sync status.
+For shared proof, prefer the ChatData MCP tool `chatdata_create_proof_receipt` so the receipt lands in workspace-backed context immediately. If you used the local helper first, run `/chatdata:sync-context` as its own final step so MCP receives the receipt.
+
+After recording a company proof receipt, run `/chatdata:sync-context` as its own final step and report the MCP-backed sync status.
