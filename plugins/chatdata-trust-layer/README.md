@@ -128,6 +128,7 @@ That agent enforces the principal workflow:
 - `/chatdata:build-benchmark`
 - `/chatdata:generate-evals`
 - `/chatdata:drift-check`
+- `/chatdata:publish-patch`
 - `/chatdata:publish-slack-context`
 - `/chatdata:review-readiness`
 

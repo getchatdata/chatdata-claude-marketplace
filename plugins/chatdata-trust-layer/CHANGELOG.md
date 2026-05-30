@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.4 - 2026-05-30
+
+- added `/chatdata:publish-patch` so pending MCP patches have a real Claude command path instead of a nonexistent instruction
+- taught the command to list pending patches through `chatdata_list_review_queue`, require an explicit patch id, and publish with `chatdata_publish_patch`
+
 ## 0.3.3 - 2026-05-30
 
 - made ChatData for Claude Code a plugin-plus-MCP install: the plugin owns workflow enforcement, while the MCP owns shared context transport, status, and workspace-backed reads/writes

@@ -1,6 +1,6 @@
 {
   "name": "chatdata",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "ChatData for Claude Code: operate like a principal data professional with MCP-backed shared context, trusted analytics workflows, validation, proof receipts, and trial gating.",
   "author": {
     "name": "Paras Doshi",
